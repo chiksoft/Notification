@@ -1,0 +1,24 @@
+<%@page import="java.util.Iterator"%>
+<head>
+<meta charset="utf-8">
+<title><%=metaTitle%></title>
+<meta name="description" content="<%=metaDescription%>" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%
+	String[] defaultCss = { "bootstrap.min", "global", "categories", "animate.min", "ionicons.min", "bootstrapValidator.min" };
+	for (String stylesheet : defaultCss) {
+%>
+	<link rel="stylesheet" href="../resources/css/<%= stylesheet %>.css" />
+<%
+	}
+	
+	Iterator<String> iteratorMoreCss = null;
+	//iteratorMoreCss = moreCss.listIterator();
+	 
+	while (iteratorMoreCss.hasNext()) {
+%>
+	<link rel="stylesheet" href="../resources/css/<%= iteratorMoreCss.next() %>.css" />
+<%
+	}
+%>
+</head>

@@ -6,19 +6,23 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="country")
+@Table(name = "country")
 public class Country {
-	
+
 	@Id
-	@Column(name="country_code")
+	@Column(name = "country_code")
 	private String countryCode;
-	@Column(name="country_name")
+	
+	@Column(name = "country_name")
 	private String countryName;
-	@Column(name="pincode_format")
+	
+	@Column(name = "pincode_format")
 	private String pincodeFormat;
-	@Column(name="phone_number_format")
+	
+	@Column(name = "phone_number_format")
 	private String phoneNumberFormat;
-	@Column(name="phone_number_prefix")
+	
+	@Column(name = "phone_number_prefix")
 	private String phoneNumberPrefix;
 
 	public String getCountryCode() {

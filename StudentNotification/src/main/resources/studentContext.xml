@@ -27,6 +27,7 @@
 		<beans:property name="annotatedClasses">
 			<beans:list>
 				<beans:value>org.chiksoft.student.model.Country</beans:value>
+				<beans:value>org.chiksoft.student.model.Student</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
@@ -44,4 +45,8 @@
 		<beans:property name="sessionFactory" ref="sessionFactory" />
 	</beans:bean>
 	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
 </beans:beans>
